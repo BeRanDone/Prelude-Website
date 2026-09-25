@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strangers &amp; Pilgrims | A Prelude to the End of the World</title>
+<meta name="description" content="Strangers &amp; Pilgrims: Christian apparel made to start the conversation that matters. The name is from Hebrews 11:13.">
+<meta property="og:title" content="Strangers &amp; Pilgrims | A Prelude to the End of the World">
+<meta property="og:description" content="Strangers &amp; Pilgrims: Christian apparel made to start the conversation that matters. The name is from Hebrews 11:13.">
+<meta property="og:image" content="assets/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/icon-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="sub">
+<a class="skip" href="#main">Skip to the content</a>
+<div class="scroll">
+<div class="roller top" aria-hidden="true"></div>
+<div class="sheet">
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="index.html" aria-label="A Prelude to the End of the World, home">
+      <img src="assets/logo.webp" width="560" height="215" alt="">
+      <span>A Prelude to the<br>End of the World</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="timeline.html" class="keep">Timeline</a>
+      <a href="index.html#book">The book</a>
+      <a href="chapter-4.html">Read a chapter</a>
+      <a href="questions.html">Questions</a>
+      <a href="resources.html">Resources</a>
+      <a href="apparel.html" class="here" aria-current="page">Apparel</a>
+      <a href="gospel.html" class="keep">The gospel</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap prose-page">
+<div class="ap">
+  <div class="ap-panel">
+    <div class="ap-grid">
+      <div class="ap-shirt">
+        <svg class="ap-tee" viewBox="0 0 300 320" role="img" aria-label="T-shirt with the Strangers &amp; Pilgrims logo on the chest, shown in black" id="ap-tee">
+          <path d="M95 18 C112 44 188 44 205 18 L262 44 L296 106 L251 131 L236 108 L236 306 L64 306 L64 108 L49 131 L4 106 L38 44 Z" class="ap-body" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M95 18 C112 44 188 44 205 18 C190 56 110 56 95 18 Z" class="ap-shade" opacity=".55"/>
+          <path d="M64 108 L80 58 M236 108 L220 58 M64 290 H236" fill="none" class="ap-seam" stroke-width="1.5" opacity=".6"/>
+          <image href="assets/sp-logo.webp" x="97" y="78" width="106" height="106"/>
+        </svg>
+        <div class="ap-swatches" role="group" aria-label="Shirt color">
+          <button type="button" class="ap-sw on" data-name="Black" data-body="#151515" data-shade="#000" data-line="#3c3c3c" aria-pressed="true"><span style="background:#151515"></span>Black</button>
+          <button type="button" class="ap-sw" data-name="Olive" data-body="#454b2e" data-shade="#22260f" data-line="#2c311c" aria-pressed="false"><span style="background:#454b2e"></span>Olive</button>
+          <button type="button" class="ap-sw" data-name="Sand" data-body="#b9ab91" data-shade="#7d705a" data-line="#8d8069" aria-pressed="false"><span style="background:#b9ab91"></span>Sand</button>
+        </div>
+        <p class="ap-note">Design preview. Colors and placement may change, and nothing is for sale yet.</p>
+      </div>
+      <div class="ap-copy">
+        <p class="ap-kicker">Strangers &amp; Pilgrims</p>
+        <h1>Just passing through.</h1>
+        <blockquote>&ldquo;For here have we no continuing city, but we seek one to come.&rdquo; <cite>Heb 13:14</cite></blockquote>
+        <p class="ap-line">Strangers &amp; Pilgrims is Christian apparel made to start the conversation that matters. The name is from Hebrews 11:13.</p>
+        <p class="ap-soon"><b>First designs coming soon</b></p>
+        <a class="btn btn-tan" href="mailto:aPreludeToTheEndOfTheWorld@gmail.com?subject=Tell%20me%20when%20Strangers%20%26%20Pilgrims%20opens&amp;body=Please%20let%20me%20know%20when%20the%20first%20Strangers%20%26%20Pilgrims%20designs%20are%20available.">Email me when it opens</a>
+      </div>
+    </div>
+  </div>
+  <h2 class="ap-h">The name</h2>
+  <blockquote class="ap-verse">&ldquo;These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth.&rdquo; <cite>Heb 11:13</cite></blockquote>
+  <p>Peter uses the same words to the church: &ldquo;Dearly beloved, I beseech you as strangers and pilgrims&hellip;&rdquo; <cite class="ap-ref">1 Pet 2:11</cite></p>
+</div>
+<script>
+/* the color picker: the buttons repaint the one shirt drawing */
+(function () {
+  var tee = document.getElementById('ap-tee'); if (!tee) return;
+  var body = tee.querySelector('.ap-body'), shade = tee.querySelector('.ap-shade'), seam = tee.querySelector('.ap-seam');
+  var btns = [].slice.call(document.querySelectorAll('.ap-sw'));
+  function set(b) {
+    body.setAttribute('fill', b.dataset.body); body.setAttribute('stroke', b.dataset.line);
+    shade.setAttribute('fill', b.dataset.shade); seam.setAttribute('stroke', b.dataset.shade);
+    tee.setAttribute('aria-label', 'T-shirt with the Strangers & Pilgrims logo on the chest, shown in ' + b.dataset.name.toLowerCase());
+    btns.forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { set(b); history.replaceState(null, '', '#' + b.dataset.name.toLowerCase()); }); });
+  var start = btns.filter(function (b) { return '#' + b.dataset.name.toLowerCase() === location.hash; })[0] || btns[0]; set(start);
+})();
+</script>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="lines7" aria-hidden="true"><i style="background:var(--t-heaven)"></i><i style="background:var(--t-israel)"></i><i style="background:var(--t-believer)"></i><i style="background:var(--t-empire)"></i><i style="background:var(--t-earth)"></i><i style="background:var(--t-man)"></i><i style="background:var(--t-satan)"></i></div>
+    <ul class="more-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="timeline.html">The timeline</a></li>
+      <li><a href="timeline.html#tour=1">Take the tour</a></li>
+      <li><a href="chart-index.html">Index of the chart</a></li>
+      <li><a href="index.html#download">Download the chart</a></li>
+      <li><a href="chapter-4.html">Read a chapter</a></li>
+      <li><a href="questions.html">Questions</a></li>
+      <li><a href="resources.html">Free resources</a></li>
+      <li><a href="check-it-yourself.html">Check it yourself</a></li>
+    </ul>
+    <p>&ldquo;Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.&rdquo; 1 Cor 10:31</p>
+    <p>Scripture quotations are from the King James Version. The timeline chart, the book, and this site are &copy; Brandon Wallis. The timeline is free to read here and to show when you teach.</p>
+    <p>Set in EB Garamond and Atkinson Hyperlegible, both under the SIL Open Font License. The zoom viewer is OpenSeadragon, under the BSD license.</p>
+    <p class="foot-last"><span class="site-version">Version 0.13</span> &middot; AI was used in the creation of this website.</p>
+  </div>
+</footer>
+
+</div><!-- /sheet -->
+<div class="roller bottom" aria-hidden="true"></div>
+</div><!-- /scroll -->
+</body>
+</html>

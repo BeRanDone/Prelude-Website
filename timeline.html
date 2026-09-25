@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The timeline | A Prelude to the End of the World</title>
+<meta name="description" content="The full prophetic timeline chart. Zoom, search any word or reference, tap a reference to read the verse, or take the guided tour.">
+<meta property="og:title" content="The timeline | A Prelude to the End of the World">
+<meta property="og:image" content="assets/share.png">
+<link rel="icon" href="assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/icon-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/timeline.css">
+</head>
+<body class="tl">
+
+<header class="bar" id="bar">
+  <a class="home" href="index.html" aria-label="Back to the home page">
+    <img src="assets/logo.webp" width="560" height="215" alt="">
+    <span>A Prelude to the End of the World</span>
+  </a>
+
+  <div class="search" role="search">
+    <label class="vh" for="q">Search the timeline</label>
+    <input id="q" type="search" inputmode="search" autocomplete="off" spellcheck="false"
+           placeholder="Search the timeline: rapture, Damascus, Rev 13&hellip;" aria-controls="results" aria-expanded="false">
+    <div class="count" id="count" aria-live="polite"></div>
+    <button class="ib" id="prev" type="button" aria-label="Previous result" disabled>&#8249;</button>
+    <button class="ib" id="next" type="button" aria-label="Next result" disabled>&#8250;</button>
+    <ul class="results" id="results" role="listbox" hidden></ul>
+  </div>
+
+  <div class="tools">
+    <label class="vh" for="jump">Jump to an event</label>
+    <select id="jump"><option value="">Jump to&hellip;</option></select>
+    <button class="tb gold" id="tourbtn" type="button">Take the tour</button>
+    <button class="tb" id="share" type="button">Copy link to this view</button>
+    <button class="tb" id="download" type="button" data-download-chart title="Download the chart as a picture, about 9,700 pixels wide">Download</button>
+    <button class="tb" id="present" type="button">Present</button>
+  </div>
+</header>
+
+<nav class="rows" id="rows" aria-label="Follow one timeline"></nav>
+
+<main id="viewer" class="viewer" aria-label="The timeline chart. Drag to move, pinch or scroll to zoom."></main>
+
+<div class="dock" id="dock">
+  <div class="mini-wrap" aria-hidden="true"><div id="nav" class="mini"></div></div>
+  <div class="zoom">
+    <button class="ib" id="zout" type="button" aria-label="Zoom out">&minus;</button>
+    <button class="ib" id="zin" type="button" aria-label="Zoom in">+</button>
+    <button class="tb" id="fit" type="button">Whole chart</button>
+    <details class="keys-help"><summary class="tb" title="Keyboard keys">Keys</summary>
+      <div class="keys-pop" role="note"><kbd>/</kbd> search, <kbd>Enter</kbd> next result, <kbd>+</kbd> <kbd>&minus;</kbd> zoom, arrow keys move, <kbd>0</kbd> whole chart, <kbd>Page Down</kbd> next tour stop.</div>
+    </details>
+  </div>
+</div>
+
+<aside class="verse" id="verse" aria-label="The verse, King James Version" hidden>
+  <div class="vhead"><span>King James Version</span><button class="ib" id="verseclose" type="button" aria-label="Close the verse">&times;</button></div>
+  <div class="vbody" id="versebody"></div>
+</aside>
+
+<section class="tour" id="tour" aria-label="Guided tour" aria-live="polite" hidden>
+  <div class="thead"><span id="tourcount"></span><button class="ib" id="tourclose" type="button" aria-label="End the tour">&times;</button></div>
+  <h2 id="tourtitle"></h2>
+  <p id="tourtext"></p>
+  <div class="tnav"><button class="tb" id="tourback" type="button">Back</button><button class="tb gold" id="tournext" type="button">Next</button></div>
+</section>
+
+<button class="exit" id="exit" type="button" hidden>Leave present mode</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:2rem;color:#fff">The interactive timeline needs JavaScript. You can still see the chart on the <a href="index.html">home page</a>.</p></noscript>
+
+<script src="vendor/openseadragon.min.js"></script>
+<script src="timeline/index-data.js"></script>
+<script src="timeline/verses.js"></script>
+<script src="assets/timeline.js"></script>
+<script src="assets/download.js"></script>
+</body>
+</html>
